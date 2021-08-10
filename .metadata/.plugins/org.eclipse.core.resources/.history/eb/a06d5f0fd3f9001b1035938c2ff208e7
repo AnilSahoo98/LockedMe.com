@@ -1,0 +1,22 @@
+package com.lockedme;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class LockedMeProject {
+	static final String folderpath ="E:\\Simplilearn\\Phase-1 Assessment\\Lockedme.com\\Lockedme.com\\src\\directory";
+
+	public static void main(String[] args)
+	{
+		// TODO Auto-generated method stub
+
+		List<String> fileName = FileManager.getAllFiles(folderpath);
+		for (String f :fileName)
+			System.out.println(f);
+		
+	
+		 
+//		
+	}
+}

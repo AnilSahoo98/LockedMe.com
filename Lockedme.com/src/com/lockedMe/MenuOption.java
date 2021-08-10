@@ -1,4 +1,4 @@
-package com.lockedMe;
+package com.lockedme;
 
 public class MenuOption {
 

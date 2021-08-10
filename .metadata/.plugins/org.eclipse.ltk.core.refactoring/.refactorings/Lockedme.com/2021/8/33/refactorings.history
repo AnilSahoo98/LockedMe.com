@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.lockedMe&apos; to &apos;com.lockedme&apos;&#x0D;&#x0A;- Original project: &apos;Lockedme.com&apos;&#x0D;&#x0A;- Original element: &apos;Lockedme.com/src/com.lockedMe&apos;&#x0D;&#x0A;- Renamed element: &apos;Lockedme.com/src/com.lockedme&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.lockedMe&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.lockedMe" name="com.lockedme" qualified="false" references="true" stamp="1628516215318" textual="false" version="1.0"/>
+</session>
