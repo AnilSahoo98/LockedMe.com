@@ -6,4 +6,6 @@
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="com.lockedme.MenuOption"/>
+    <fullyQualifiedTypeName name="com.lockedme.HandleOptions"/>
 </qualifiedTypeNameHistroy>

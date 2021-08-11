@@ -17,7 +17,7 @@ public class LockedMeMain
 				//declare a list to store file names
 				List<String> fileNames = new ArrayList<String>();
 				
-				for (File f:listofFiles)
+				for (File f:listofFiles) //Using ForEach to get the file names 
 					fileNames.add(f.getName());
 				return fileNames;
 	}
@@ -35,7 +35,7 @@ public class LockedMeMain
 		try 
 		{
 			File fl = new File(folderpath,fileName);
-			FileWriter fw = new FileWriter(fl);
+			FileWriter fw = new FileWriter(fl); //write the userinput to the file
 			
 			for (String s : Content) 
 			{
@@ -62,10 +62,10 @@ public class LockedMeMain
 	public static boolean deleteFile(String folderpath,String fileName)
 	{
 		
-		File file = new File(folderpath+"\\"+fileName);
+		File file = new File(folderpath+"\\"+fileName); //delete the file from the directory 
 		
 		try {
-			if (file.delete())
+			if (file.delete()) // if the file exits it will delete the file 
 				return true;
 			else 
 				return false;

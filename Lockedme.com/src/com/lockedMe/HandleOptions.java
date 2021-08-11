@@ -6,28 +6,28 @@ public class HandleOptions
 {
 	public static boolean handleWelcomeScreenInput() 
 	{
+		do { //Using While Condition for Displaying Option
 		
-		Scanner sc = new Scanner(System.in);
-		
-			try {
+			try {	
+				Scanner sc = new Scanner(System.in);
+				int input;
 				MenuOption.displayMenu();
-				int input = sc.nextInt();
-
+				input = Integer.parseInt(sc.nextLine()); //Taking Input from the user
 				switch (input) {
 				case 1:
-					FileManager.getAllFiles("directory");
+					FileManager.getAllFiles("directory"); //Display files in the directory
 					break;
 				case 2:
-					HandleOptions.handleFileMenuOptions();
+					HandleOptions.handleFileMenuOptions(); //option to add,delete,search
 					break;
 				case 3:
-					System.out.println("Program exited successfully.");
+					System.out.println("Program exited successfully."); //exit the program
 					return true;
 				case 4:
 					System.exit(0);
 					break;
 				default:
-					System.out.println("Please select a valid option from above.");
+					System.out.println("Please select a valid option from above.");//In case of invailed Entery   
 					
 				}
 			} 
@@ -36,12 +36,14 @@ public class HandleOptions
 				System.out.println(e.getClass().getName());
 				handleWelcomeScreenInput();
 			} 
-		 while (true);
+			
+		}while (true);
+		
 	
 
 }
 
-	public static boolean  handleFileMenuOptions() {
+	public static boolean  handleFileMenuOptions() { //Option to add,delete,search the file
 		
 		Scanner sc = new Scanner(System.in);
 		do {
@@ -49,24 +51,24 @@ public class HandleOptions
 			try {
 				MenuOption.displayFileMenuOption();				
 				
-				int input = sc.nextInt();
+				int input = Integer.parseInt(sc.nextLine());; //user input option
 				switch (input) 
 				{
 				case 1:
-					FileManager.createFiles();
+					FileManager.createFiles(); //Create a file 
 					break;
 				case 2:
-					FileManager.deleteFile();
+					FileManager.deleteFile(); // delete the file from the directory
 					break;
 				case 3:
-					FileManager.searchFile();
+					FileManager.searchFile(); // search the file from the directory
 					break;
 				case 4:
-					return false ;
+					return false ; //return to the previous Menu
 				case 5:
 					// Exit
 					System.exit(0);
-					System.out.println("Program exited successfully.");
+					System.out.println("Program exited successfully."); //exit the program
 					return false;
 				
 					
@@ -77,7 +79,7 @@ public class HandleOptions
 			} catch (Exception e) {
 				System.out.println(e.getClass().getName());
 				 e.printStackTrace();
-				handleFileMenuOptions();
+//				handleFileMenuOptions();
 			}
 			
 		}while (true);
