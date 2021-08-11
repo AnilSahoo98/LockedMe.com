@@ -1,0 +1,80 @@
+package com.lockedme;
+
+import java.util.Scanner;
+
+public class HandleOptions 
+{
+	public static boolean handleWelcomeScreenInput() 
+	{
+		
+		Scanner sc = new Scanner(System.in);
+		do {
+			try {
+				MenuOption.displayMenu();
+				int input = sc.nextInt();
+
+				switch (input) {
+				case 1:
+					LockedMeMain.getAllFiles("directory");
+					break;
+				case 2:
+					HandleOptions.handleFileMenuOptions();
+					break;
+				case 3:
+					System.out.println("Program exited successfully.");
+					return false;
+				case 4:
+					System.exit(0);
+					break;
+				default:
+					System.out.println("Please select a valid option from above.");
+				}
+			} catch (Exception e) {
+				System.out.println(e.getClass().getName());
+				handleWelcomeScreenInput();
+			} 
+		} while (true);
+	
+
+}
+
+	public static boolean  handleFileMenuOptions() {
+		
+		Scanner sc = new Scanner(System.in);
+		do {
+			try {
+				MenuOption.displayFileMenuOption();
+//				FileManager.createMainFolderIfNotPresent("main");
+				
+				int input = sc.nextInt();
+				switch (input) {
+				case 1:
+					FileManager.getAllFiles();
+				case 2:
+					FileManager.createFiles();
+					break;
+				case 3:
+					FileManager.deleteFile();
+					break;
+				case 4:
+					FileManager.searchFile();
+				case 5:
+					// Exit
+					System.exit(0);
+					System.out.println("Program exited successfully.");
+					return false;
+					
+					
+				default:
+					System.out.println("Please select a valid option from above.");
+				}
+			} catch (Exception e) {
+				System.out.println(e.getClass().getName());
+				handleFileMenuOptions();
+			}
+			sc.close();
+		} while ( true);
+		
+	}
+
+}
