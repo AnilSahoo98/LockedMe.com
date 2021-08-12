@@ -6,8 +6,7 @@ public class HandleOptions
 {
 	public static boolean handleWelcomeScreenInput() 
 	{
-		do { 
-			//Using While Condition for Displaying Option again until the user exits the program 
+		do { //Using While Condition for Displaying Option
 		
 			try {	
 				Scanner sc = new Scanner(System.in);
@@ -16,7 +15,7 @@ public class HandleOptions
 				input = Integer.parseInt(sc.nextLine()); //Taking Input from the user
 				switch (input) {
 				case 1:
-					FileManagerMain.getAllFiles("directory"); //Display files in the directory
+					FileManager.getAllFiles("directory"); //Display files in the directory
 					break;
 				case 2:
 					HandleOptions.handleFileMenuOptions(); //option to add,delete,search
@@ -56,13 +55,13 @@ public class HandleOptions
 				switch (input) 
 				{
 				case 1:
-					FileManagerMain.createFiles(); //Create a file 
+					FileManager.createFiles(); //Create a file 
 					break;
 				case 2:
-					FileManagerMain.deleteFile(); // delete the file from the directory
+					FileManager.deleteFile(); // delete the file from the directory
 					break;
 				case 3:
-					FileManagerMain.searchFile(); // search the file from the directory
+					FileManager.searchFile(); // search the file from the directory
 					break;
 				case 4:
 					return false ; //return to the previous Menu

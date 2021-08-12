@@ -6,8 +6,7 @@ public class HandleOptions
 {
 	public static boolean handleWelcomeScreenInput() 
 	{
-		do { 
-			//Using While Condition for Displaying Option again until the user exits the program 
+		do { //Using While Condition for Displaying Option
 		
 			try {	
 				Scanner sc = new Scanner(System.in);

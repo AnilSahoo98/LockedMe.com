@@ -1,6 +1,6 @@
 package com.lockedme;
 
-
+import java.util.Scanner;
 
 public class MenuOption {
 	public static void displayMenu(){ 
@@ -12,7 +12,7 @@ public class MenuOption {
 		System.out.println(companyDetails);
 
 		System.out.println(appFunction);
-		// Creating a DisplayMenu
+		//// Creating a DisplayMenu
 		
 		String menu = "\n\n****** Select any option number from below and press Enter ******\n\n"+ "1) Retrieve all files inside \"directory\" folder\n" + "2) Display menu for File operations\n"+ "3) Exit program\n";
 		
